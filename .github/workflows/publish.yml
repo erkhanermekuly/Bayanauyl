@@ -1,0 +1,23 @@
+# Публикация сайта: каждое обновление ветки main копируется в ветку gh-pages,
+# из которой GitHub Pages раздаёт сайт https://erkhanermekuly.github.io/Bayanauyl/
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Mirror main to gh-pages
+        run: git push --force origin HEAD:refs/heads/gh-pages
