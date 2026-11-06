@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<!--
+  Баянауыл — каменная сказка Сарыарки
+  Автор сайта: Ермекұлы Ерхан (github.com/erkhanermekuly)
+  © 2026 Ермекұлы Ерхан. Все права защищены.
+  Копирование кода, дизайна и вёрстки без письменного разрешения автора запрещено (см. файл LICENSE).
+-->
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.openstreetmap.org; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Баянауыл — каменная сказка Сарыарки</title>
+  <meta name="description" content="Баянауыл — первый национальный парк Казахстана и любимая зона отдыха: озёра Жасыбай, Сабындыколь и Торайгыр, скала Кемпиртас, пещера Коныр-Аулие, сезоны, маршруты и советы путешественнику.">
+  <meta name="author" content="Ермекұлы Ерхан">
+  <meta name="copyright" content="© 2026 Ермекұлы Ерхан. Все права защищены.">
+  <meta name="theme-color" content="#0f211c">
+  <link rel="canonical" href="https://erkhanermekuly.github.io/Bayanauyl/">
+  <link rel="author" href="https://github.com/erkhanermekuly">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://erkhanermekuly.github.io/Bayanauyl/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Баянауыл — каменная сказка Сарыарки">
+  <meta property="og:description" content="Гранитные скалы, сосны на камнях и четыре озера посреди степи. Путеводитель по первому национальному парку Казахстана.">
+  <meta property="og:image" content="https://erkhanermekuly.github.io/Bayanauyl/images/hero.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- ===================== Навигация ===================== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="logo" href="#top" aria-label="Баянауыл — в начало страницы">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.6" stroke-width="1.4"/>
+          <path d="M6.5 26.5l8-11.5 4.8 6.2 3.9-6.7 10.3 12" stroke-width="1.8"/>
+          <path d="M10 31c2.6-1.5 4.6-1.5 7.2 0s4.6 1.5 7.2 0 3.7-1.3 5.6-.6" stroke-width="1.4"/>
+        </svg>
+        <span class="logo__text">Баянауыл</span>
+      </a>
+
+      <nav class="nav__links" id="nav-menu" aria-label="Основная навигация">
+        <a href="#about">О крае</a>
+        <a href="#lakes">Озёра</a>
+        <a href="#rocks">Скалы и легенды</a>
+        <a href="#nature">Природа</a>
+        <a href="#todo">Отдых</a>
+        <a href="#seasons">Сезоны</a>
+        <a href="#gallery">Галерея</a>
+        <a class="nav__cta" href="#route">Как добраться</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== Hero ===================== -->
+    <section class="hero" id="top">
+      <div class="hero__media">
+        <img class="hero__img" src="images/hero.jpg" width="1920" height="1270" fetchpriority="high"
+             alt="Озеро в Баянаульском национальном парке: слоистые гранитные скалы и сосны отражаются в неподвижной воде">
+      </div>
+      <div class="hero__shade"></div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>Павлодарская область</span><i></i><span>Казахстан</span>
+        </p>
+        <h1 class="hero__title">Баянауыл</h1>
+        <p class="hero__lead">Гранитные великаны, сосны на камнях и четыре озера посреди бескрайней степи. Первый национальный парк Казахстана — место, где легенды можно потрогать рукой.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#about">Начать путешествие
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#route">Как добраться</a>
+        </div>
+      </div>
+
+      <dl class="container hero__stats">
+        <div><dt>1985</dt><dd>год основания — первый нацпарк страны</dd></div>
+        <div><dt>68&nbsp;453 га</dt><dd>заповедных гор, лесов и степи</dd></div>
+        <div><dt>4 озера</dt><dd>Жасыбай, Сабындыколь, Торайгыр, Биржанколь</dd></div>
+        <div><dt>1027 м</dt><dd>гора Акбет — высшая точка Баянаульских гор</dd></div>
+      </dl>
+
+      <a class="hero__scroll" href="#about" aria-label="Листать вниз к разделу «О крае»">Листайте</a>
+    </section>
+
+    <!-- ===================== О крае ===================== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__text reveal">
+          <p class="eyebrow"><span class="eyebrow__num">01</span><span class="eyebrow__line"></span>О крае</p>
+          <h2 class="h2">Горный оазис посреди <em>Сарыарки</em></h2>
+          <p class="lead">Сотни километров ровной ковыльной степи — и вдруг над горизонтом поднимаются синие горы. Баянаульский массив лежит на окраине Казахского мелкосопочника, на юге Павлодарской области. За миллионы лет ветер и вода превратили древние граниты в причудливые фигуры, склоны поросли сосной, а в котловинах между хребтами легли прозрачные озёра.</p>
+          <p>В 1985 году эти места стали первым национальным парком Казахстана — чтобы сохранить и восстановить природу горного массива. Сегодня Баянауыл — одна из самых любимых зон отдыха страны: сюда едут купаться в Жасыбае, подниматься к священной пещере Коныр-Аулие и разгадывать, на кого похожа очередная скала.</p>
+
+          <ul class="about__facts">
+            <li><b>400–1027 м</b><span>высоты над уровнем моря</span></li>
+            <li><b>40–50 км</b><span>тянутся горы с запада на восток</span></li>
+            <li><b>100&nbsp;000+</b><span>гостей отдыхает здесь каждый год</span></li>
+          </ul>
+        </div>
+
+        <div class="about__media reveal" data-delay="120">
+          <figure class="about__main">
+            <img src="images/mountains.jpg" width="1280" height="853" loading="lazy" alt="Баянаульские горы: гранитные останцы и сосны на фоне синих хребтов">
+          </figure>
+          <figure class="about__sub">
+            <img src="images/horses.jpg" width="1280" height="603" loading="lazy" alt="Табун лошадей среди сосен и гранитных плит">
+          </figure>
+          <div class="about__badge" aria-hidden="true"><b>1985</b><span>первый нацпарк Казахстана</span></div>
+        </div>
+      </div>
+
+      <div class="container origin reveal">
+        <svg class="ornament" viewBox="0 0 150 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10h46M102 10h46"/><path d="M75 2l8 8-8 8-8-8z"/><path d="M58 10l3.5-3.5L65 10l-3.5 3.5zM85 10l3.5-3.5L92 10l-3.5 3.5z"/></svg>
+        <p class="origin__label">Откуда имя</p>
+        <blockquote class="origin__quote">По одной из версий, «Баян-аула» значит <b>«богатые, счастливые горы»</b>. По другой — край назван в честь красавицы <b>Баян</b>, героини степной легенды.</blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== Озёра ===================== -->
+    <section class="section lakes" id="lakes">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">02</span><span class="eyebrow__line"></span>Озёра</p>
+          <h2 class="h2">Четыре зеркала <em>Баянауыла</em></h2>
+          <p class="section__intro">В парке четыре крупных пресных озера и множество маленьких, которые в засуху почти пересыхают. У каждого — свой характер и своя легенда.</p>
+        </header>
+
+        <article class="lake reveal">
+          <figure class="lake__media">
+            <img src="images/jasybay.jpg" width="1280" height="960" loading="lazy" alt="Озеро Жасыбай: синяя вода и поросшие сосной горы на дальнем берегу">
+            <span class="lake__chip">Самое прозрачное</span>
+          </figure>
+          <div class="lake__body">
+            <span class="lake__num">№ 01</span>
+            <h3 class="lake__title">Жасыбай</h3>
+            <p class="lake__kz">прежнее название — Шойынколь, «чугунное озеро»</p>
+            <p class="lake__text">Главное озеро для отдыха лежит в котловине между горными грядами, под склонами Акбета. Здесь лучшие пляжи парка, больше всего баз отдыха, прокат лодок и катамаранов. Озеро носит имя батыра Жасыбая: по преданию, в 1752 году он погиб в бою с джунгарами на перевале, который с тех пор тоже зовут Жасыбаем.</p>
+            <dl class="lake__data">
+              <div><dt>4 км²</dt><dd>площадь</dd></div>
+              <div><dt>14,7 м</dt><dd>глубина</dd></div>
+              <div><dt>3,5 × 2,4 км</dt><dd>размеры</dd></div>
+            </dl>
+            <ul class="lake__best" aria-label="Чем заняться">
+              <li>Пляжи</li><li>Купание</li><li>Катамараны</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="lake lake--flip reveal">
+          <figure class="lake__media">
+            <img src="images/sabyndykol.jpg" width="1280" height="960" loading="lazy" alt="Озеро Сабындыколь: гранитные плиты берега и синяя вода до горизонта">
+            <span class="lake__chip">Самое большое</span>
+          </figure>
+          <div class="lake__body">
+            <span class="lake__num">№ 02</span>
+            <h3 class="lake__title">Сабындыколь</h3>
+            <p class="lake__kz">каз. Сабындыкөл — «мыльное озеро»</p>
+            <p class="lake__text">На берегу самого большого озера парка стоит село Баянаул. Вода здесь необычайно мягкая, будто мыльная на ощупь, — отсюда и название. Легенда объясняет это просто: красавица Баян мыла в озере свои прекрасные волосы и обронила в воду мыло.</p>
+            <dl class="lake__data">
+              <div><dt>7,4 км²</dt><dd>площадь</dd></div>
+              <div><dt>№ 1</dt><dd>по величине в парке</dd></div>
+            </dl>
+            <ul class="lake__best" aria-label="Чем заняться">
+              <li>Закаты</li><li>Прогулки у воды</li><li>Рядом с селом</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="lake reveal">
+          <figure class="lake__media">
+            <img src="images/toraigyr.jpg" width="1280" height="853" loading="lazy" alt="Озеро Торайгыр: слоистые скалы отражаются в зеркальной воде">
+            <span class="lake__chip">Самое высокогорное</span>
+          </figure>
+          <div class="lake__body">
+            <span class="lake__num">№ 03</span>
+            <h3 class="lake__title">Торайгыр</h3>
+            <p class="lake__kz">каз. Торайғыр — в честь поэта Султанмахмута Торайгырова</p>
+            <p class="lake__text">Третье по величине озеро лежит выше остальных, у северного подножия гор. Над водой поднимаются слоистые скалы и два каменистых острова Жартас, рядом шумит роща реликтовой чёрной ольхи. Детство поэта Торайгырова прошло в этих краях — в одноимённом селе работает его музей.</p>
+            <dl class="lake__data">
+              <div><dt>0,88 км²</dt><dd>площадь</dd></div>
+              <div><dt>3,1 м</dt><dd>средняя глубина</dd></div>
+            </dl>
+            <ul class="lake__best" aria-label="Чем заняться">
+              <li>Рыбалка</li><li>Фотография</li><li>Тишина</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside class="lake-mini reveal" aria-label="Озеро Биржанколь">
+          <div>
+            <p class="lake-mini__label">И ещё одно — № 04</p>
+            <h3>Биржанколь — <em>«озеро одной души»</em></h3>
+            <p>Самое маленькое из четырёх прячется в стороне от шумных пляжей. Северный и восточный берега здесь песчаные, южный и западный сложены каменными «лепёшками». Сюда едут за тишиной и рыбалкой: в озере водятся сазан, карп и карась.</p>
+          </div>
+          <dl>
+            <div><dt>≈ 800 м</dt><dd>в поперечнике</dd></div>
+            <div><dt>8 м</dt><dd>наибольшая глубина</dd></div>
+            <div><dt>26 км</dt><dd>от села Баянаул</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== Панорама ===================== -->
+    <section class="band" aria-label="Озеро Жасыбай ранним утром">
+      <div class="container reveal">
+        <p class="band__quote">Ранним утром Жасыбай неподвижен — и горы отражаются в нём до последней сосны.</p>
+        <p class="band__caption">Озеро Жасыбай · рассвет</p>
+      </div>
+    </section>
+
+    <!-- ===================== Скалы и легенды ===================== -->
+    <section class="section rocks on-dark topo" id="rocks">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">03</span><span class="eyebrow__line"></span>Скалы и легенды</p>
+          <h2 class="h2">Каменная сказка, <em>написанная ветром</em></h2>
+          <p class="section__intro">Века ветра и воды вырезали из баянаульского гранита фигуры, в которых легко узнать людей, зверей и даже летающую тарелку. У каждой скалы своё имя, а у многих — и своя легенда.</p>
+        </header>
+
+        <div class="rocks__grid">
+          <article class="rock rock--wide reveal">
+            <figure class="rock__media rock__media--right">
+              <img src="images/kempirtas.jpg" width="1280" height="853" loading="lazy" alt="Скала Кемпиртас, похожая на голову старухи, над долиной">
+              <span class="rock__num">01</span>
+            </figure>
+            <div class="rock__body">
+              <p class="rock__tag">Символ Баянауыла</p>
+              <h3 class="rock__title">Кемпиртас <small>каз. кемпір тас — «камень-старуха», в народе «Баба-Яга»</small></h3>
+              <p class="rock__text">Самая знаменитая скала парка. Под нужным углом гранитная глыба превращается в голову лысой беззубой старухи с хитрой усмешкой — трудно поверить, что её вытесали только ветер и время.</p>
+            </div>
+          </article>
+
+          <article class="rock reveal" data-delay="100">
+            <figure class="rock__media">
+              <img src="images/bulka.jpg" width="1280" height="853" loading="lazy" alt="Гора Булка — гладкий гранитный купол над сосновым лесом">
+              <span class="rock__num">02</span>
+            </figure>
+            <div class="rock__body">
+              <p class="rock__tag">Гранитный купол</p>
+              <h3 class="rock__title">Гора Булка</h3>
+              <p class="rock__text">Гладкий каменный каравай виден издалека и служит ориентиром на многих тропах парка.</p>
+            </div>
+          </article>
+
+          <article class="rock reveal">
+            <figure class="rock__media">
+              <img src="images/peak.jpg" width="1280" height="960" loading="lazy" alt="Острая скальная вершина Пик Смелых над сосновым лесом">
+              <span class="rock__num">03</span>
+            </figure>
+            <div class="rock__body">
+              <p class="rock__tag">Для скалолазов</p>
+              <h3 class="rock__title">Пик Смелых</h3>
+              <p class="rock__text">Острая вершина над лесом — любимая цель восходителей. Вместе с Найзатасом, «каменным копьём», и Акбетом входит в классику здешних маршрутов.</p>
+            </div>
+          </article>
+
+          <article class="rock rock--wide reveal" data-delay="100">
+            <figure class="rock__media">
+              <img src="images/konyr-aulie.jpg" width="1280" height="854" loading="lazy" alt="Вид из пещеры Коныр-Аулие на долину и скалы">
+              <span class="rock__num">04</span>
+            </figure>
+            <div class="rock__body">
+              <p class="rock__tag">Святое место</p>
+              <h3 class="rock__title">Пещера Коныр-Аулие <small>каз. Қоңыр әулие · гора Аккарагай</small></h3>
+              <p class="rock__text">Говорят, желание, загаданное с ладонью на стене пещеры, непременно сбудется — если выйти пятясь, не поворачиваясь лицом к выходу. К пещере ведёт подъём длиной больше километра: в 2020 году здесь построили лестницу с площадками для отдыха.</p>
+            </div>
+          </article>
+
+          <article class="rock rock--wide reveal">
+            <figure class="rock__media">
+              <img src="images/akbet.jpg" width="1280" height="768" loading="lazy" alt="Вид с горы Акбет на озеро Жасыбай и лесистые хребты">
+              <span class="rock__num">05</span>
+            </figure>
+            <div class="rock__body">
+              <p class="rock__tag">1027 метров</p>
+              <h3 class="rock__title">Гора Акбет</h3>
+              <p class="rock__text">Высшая точка Баянаульских гор. По легенде, гора названа в честь девушки Акбет, которая бросилась со скалы, когда её выдали замуж за нелюбимого. Наградой за подъём станет вид на Жасыбай и бесконечные гряды хребтов.</p>
+            </div>
+          </article>
+
+          <article class="rock reveal" data-delay="100">
+            <figure class="rock__media">
+              <img src="images/witches-ravine.jpg" width="1280" height="960" loading="lazy" alt="Ущелье Ведьм: слоистая скальная стена в зелёном лесу">
+              <span class="rock__num">06</span>
+            </figure>
+            <div class="rock__body">
+              <p class="rock__tag">Тень и родники</p>
+              <h3 class="rock__title">Ущелье Ведьм</h3>
+              <p class="rock__text">Тенистое ущелье на западном склоне Акбета: слоистые каменные стены, густая зелень и множество родников.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Баба-Яга</span><span>Голубь</span><span>Верблюд</span><span>Лошадиная голова</span><span>Каменные перины</span><span>Летающая тарелка</span><span>Динозавр</span><span>Голова мамонта</span><span>Найзатас</span>
+          <span>Баба-Яга</span><span>Голубь</span><span>Верблюд</span><span>Лошадиная голова</span><span>Каменные перины</span><span>Летающая тарелка</span><span>Динозавр</span><span>Голова мамонта</span><span>Найзатас</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Природа ===================== -->
+    <section class="section nature" id="nature">
+      <div class="container nature__grid">
+        <div class="nature__media reveal">
+          <figure class="nature__img nature__img--pine">
+            <img src="images/pine.jpg" width="1280" height="813" loading="lazy" alt="Сосна, растущая на краю гранитной скалы над озером">
+            <figcaption>Баянаульская сосна на краю скалы</figcaption>
+          </figure>
+          <figure class="nature__img">
+            <img src="images/forest.jpg" width="1280" height="871" loading="lazy" alt="Густой лиственный лес на берегу озера Торайгыр">
+            <figcaption>Лес на берегу Торайгыра</figcaption>
+          </figure>
+        </div>
+
+        <div class="nature__text reveal" data-delay="120">
+          <p class="eyebrow"><span class="eyebrow__num">04</span><span class="eyebrow__line"></span>Природа</p>
+          <h2 class="h2">Сосны, растущие <em>из камня</em></h2>
+          <p class="lead">Лес, лесостепь, степь и луг — четыре мира встречаются здесь на небольшом пятачке земли посреди сухой степи. Баянаульская сосна селится прямо на скалах, цепляясь корнями за трещины в граните.</p>
+          <p>У воды сохранились рощи реликтовой чёрной ольхи, на камнях растёт редкая каменная смородина. В лесах — берёза, осина, шиповник, боярышник и малина, на лугах летом зреет земляника, а после дождей идут грибы.</p>
+
+          <dl class="counters">
+            <div><dt><span data-count="460">460</span></dt><dd>видов растений</dd></div>
+            <div><dt><small>до</small> <span data-count="50">50</span></dt><dd>реликтовых видов</dd></div>
+            <div><dt><small>≈</small> <span data-count="40">40</span></dt><dd>видов зверей</dd></div>
+            <div><dt><small>≈</small> <span data-count="50">50</span></dt><dd>видов птиц</dd></div>
+          </dl>
+
+          <p class="chips-title">Кого можно встретить</p>
+          <ul class="chips">
+            <li class="chips__star">Архар <small>Красная книга</small></li>
+            <li>Косуля</li><li>Барсук</li><li>Белка</li><li>Беркут</li><li>Журавль</li><li>Лебедь</li><li>Цапля</li><li>Дрофа</li><li>Пустельга</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Чем заняться ===================== -->
+    <section class="section todo" id="todo">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">05</span><span class="eyebrow__line"></span>Чем заняться</p>
+          <h2 class="h2">Отдых на любой <em>характер</em></h2>
+          <p class="section__intro">Можно весь отпуск пролежать на пляже Жасыбая, а можно каждый день уходить в горы — Баянауыл не заставляет выбирать.</p>
+        </header>
+
+        <div class="todo__grid">
+          <article class="todo__card reveal">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7.5" r="3.2"/><path d="M12 1.8v1M6.3 7.5h-1M18.7 7.5h-1M7.9 3.4l.7.7M16.1 3.4l-.7.7"/><path d="M3 16.5c2 0 2-1.4 4.5-1.4s2.5 1.4 4.5 1.4 2-1.4 4.5-1.4 2.5 1.4 4.5 1.4M3 20.6c2 0 2-1.4 4.5-1.4s2.5 1.4 4.5 1.4 2-1.4 4.5-1.4 2.5 1.4 4.5 1.4"/></svg></div>
+            <h3>Пляж и купание</h3>
+            <p>Песчаные пляжи Жасыбая и самая чистая вода в парке.</p>
+          </article>
+          <article class="todo__card reveal" data-delay="80">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15.5h18l-2.6 4.5H5.6z"/><path d="M12 15.5V3.5l6.2 9H12"/><path d="M12 6l-4.2 6.5H12"/></svg></div>
+            <h3>Лодки и катамараны</h3>
+            <p>Прокат прямо на пляжах: с воды горы выглядят совсем иначе.</p>
+          </article>
+          <article class="todo__card reveal" data-delay="160">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20l6.2-10 3.6 5.2 2.4-3.4L21.5 20z"/><path d="M8.7 10V4.5l3.3 1.4-3.3 1.5"/></svg></div>
+            <h3>Пешие маршруты</h3>
+            <p>К Кемпиртасу, в ущелье Ведьм, к пещере Коныр-Аулие.</p>
+          </article>
+          <article class="todo__card reveal" data-delay="240">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8.5 18h-17z"/><path d="M12 8.5l-2 4 3.4 1.8-2 4.2"/></svg></div>
+            <h3>Скалолазание</h3>
+            <p>Найзатас, Пик Смелых и Акбет — классика для восходителей.</p>
+          </article>
+          <article class="todo__card reveal">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.8" cy="16" r="3.6"/><circle cx="18.2" cy="16" r="3.6"/><path d="M5.8 16l3.7-7.5h5.2l3.5 7.5M9.5 8.5L13 16M8 8.5h3M14.7 8.5l-.9-2.5h2.4"/></svg></div>
+            <h3>Велосипед</h3>
+            <p>Горные дороги и лесные тропы для любителей маунтинбайка.</p>
+          </article>
+          <article class="todo__card reveal" data-delay="80">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12c3.2-4.6 9.2-5.6 14.2-1.6L21 7.6v8.8l-4.3-2.8c-5 4-11 3-14.2-1.6z"/><circle cx="7.6" cy="11.4" r=".7" fill="currentColor"/></svg></div>
+            <h3>Рыбалка</h3>
+            <p>Сазан и карась — на Торайгыре и Биржанколе, щука и окунь — в Жасыбае.</p>
+          </article>
+          <article class="todo__card reveal" data-delay="160">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.8 8.2l-2.2 5.4-5.4 2.2 2.2-5.4z"/></svg></div>
+            <h3>Экскурсии</h3>
+            <p>Гиды покажут скалы-скульптуры и расскажут их легенды.</p>
+          </article>
+          <article class="todo__card reveal" data-delay="240">
+            <div class="todo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l9-5.5 9 5.5M5.2 9.5V18M9.7 9.5V18M14.3 9.5V18M18.8 9.5V18M3 20.5h18"/></svg></div>
+            <h3>История и музеи</h3>
+            <p>Музей поэта Султанмахмута Торайгырова в селе Торайгыр.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Сезоны ===================== -->
+    <section class="section seasons" id="seasons">
+      <div class="seasons__bg" aria-hidden="true">
+        <img src="images/spring.jpg" width="1600" height="1200" loading="lazy" alt="" data-season="spring">
+        <img src="images/summer.jpg" width="1600" height="1200" loading="lazy" alt="" data-season="summer" class="is-active">
+        <img src="images/autumn.jpg" width="1600" height="808" loading="lazy" alt="" data-season="autumn">
+        <img src="images/winter.jpg" width="1600" height="1067" loading="lazy" alt="" data-season="winter">
+      </div>
+
+      <div class="container">
+        <div class="seasons__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">06</span><span class="eyebrow__line"></span>Сезоны</p>
+          <h2 class="h2">Когда <em>ехать</em></h2>
+          <p>Баянауыл хорош круглый год — просто каждый сезон показывает его по-своему. Выберите время года, чтобы увидеть, чего ждать.</p>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Времена года">
+          <button class="tab" type="button" role="tab" id="tab-spring" aria-controls="panel-spring" aria-selected="false" tabindex="-1" data-season="spring">Весна</button>
+          <button class="tab" type="button" role="tab" id="tab-summer" aria-controls="panel-summer" aria-selected="true" data-season="summer">Лето</button>
+          <button class="tab" type="button" role="tab" id="tab-autumn" aria-controls="panel-autumn" aria-selected="false" tabindex="-1" data-season="autumn">Осень</button>
+          <button class="tab" type="button" role="tab" id="tab-winter" aria-controls="panel-winter" aria-selected="false" tabindex="-1" data-season="winter">Зима</button>
+        </div>
+
+        <div class="season" role="tabpanel" id="panel-spring" aria-labelledby="tab-spring" tabindex="0">
+          <div class="season__card">
+            <p class="season__months">Апрель — май</p>
+            <h3 class="season__title">Время зелёной степи</h3>
+            <p class="season__text">Степь зеленеет и зацветает, ручьи в ущельях полноводны. Озёра ещё холодные, зато на тропах почти никого — лучшее время для тех, кто едет за тишиной и долгими прогулками.</p>
+            <ul class="season__list"><li>Цветущая степь</li><li>Полноводные ручьи</li><li>Мало людей</li></ul>
+          </div>
+        </div>
+
+        <div class="season is-active" role="tabpanel" id="panel-summer" aria-labelledby="tab-summer" tabindex="0">
+          <div class="season__card">
+            <p class="season__months">Июнь — август</p>
+            <h3 class="season__title">Высокий сезон</h3>
+            <p class="season__text">Тёплая вода, работают все базы отдыха и прокаты. В жаркие дни воздух прогревается выше +30&nbsp;°C. Это самое популярное время, поэтому жильё на июль и август стоит бронировать заранее.</p>
+            <ul class="season__list"><li>Купание в Жасыбае</li><li>Катамараны и лодки</li><li>Земляничные поляны</li></ul>
+          </div>
+        </div>
+
+        <div class="season" role="tabpanel" id="panel-autumn" aria-labelledby="tab-autumn" tabindex="0">
+          <div class="season__card">
+            <p class="season__months">Сентябрь — октябрь</p>
+            <h3 class="season__title">Золото на граните</h3>
+            <p class="season__text">Берёзы и осины желтеют, воздух становится прозрачным, а пляжи пустеют. Купаться уже прохладно, зато это лучшая пора для походов, грибов и фотографии.</p>
+            <ul class="season__list"><li>Золотые склоны</li><li>Грибная пора</li><li>Мягкий свет для съёмки</li></ul>
+          </div>
+        </div>
+
+        <div class="season" role="tabpanel" id="panel-winter" aria-labelledby="tab-winter" tabindex="0">
+          <div class="season__card">
+            <p class="season__months">Ноябрь — март</p>
+            <h3 class="season__title">Снежная тишина</h3>
+            <p class="season__text">Озёра сковывает лёд, сосны стоят в снегу, а знакомые скалы выглядят совсем иначе. Морозно: средняя температура января — около −14&nbsp;°C. Заранее уточняйте, какие базы принимают гостей зимой.</p>
+            <ul class="season__list"><li>Снежные пейзажи</li><li>Лёд на озёрах</li><li>Полное уединение</li></ul>
+          </div>
+        </div>
+
+        <dl class="climate reveal">
+          <div><dt>+32&nbsp;°C</dt><dd>летний максимум</dd></div>
+          <div><dt>−14&nbsp;°C</dt><dd>средняя января</dd></div>
+          <div><dt>≈ 140 дней</dt><dd>без заморозков</dd></div>
+          <div><dt>340 мм</dt><dd>осадков в год</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== Как добраться ===================== -->
+    <section class="section route" id="route">
+      <div class="container">
+        <div class="route-hero reveal">
+          <img src="images/road.jpg" width="1600" height="1067" loading="lazy" alt="Извилистая асфальтовая дорога через холмистую степь к Баянаульским горам">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">07</span><span class="eyebrow__line"></span>Как добраться</p>
+            <h2 class="h2">Дорога <em>к горам</em></h2>
+            <p>Удобнее всего ехать на автомобиле: к парку ведёт асфальтированная трасса, а последние километры — серпантин среди сосен и скал.</p>
+          </div>
+        </div>
+
+        <div class="route__grid">
+          <div class="routes reveal">
+            <div class="route-row route-row--1">
+              <span class="route-row__city">Экибастуз</span><span class="route-row__km">≈ 130 км</span>
+              <span class="route-row__time">около 2 часов в пути — ближайший крупный город</span>
+              <span class="route-row__bar"><i></i></span>
+            </div>
+            <div class="route-row route-row--2">
+              <span class="route-row__city">Павлодар</span><span class="route-row__km">≈ 230 км</span>
+              <span class="route-row__time">3–3,5 часа в пути</span>
+              <span class="route-row__bar"><i></i></span>
+            </div>
+            <div class="route-row route-row--3">
+              <span class="route-row__city">Караганда</span><span class="route-row__km">≈ 260 км</span>
+              <span class="route-row__time">около 4 часов в пути</span>
+              <span class="route-row__bar"><i></i></span>
+            </div>
+            <div class="route-row route-row--4">
+              <span class="route-row__city">Астана</span><span class="route-row__km">≈ 440 км</span>
+              <span class="route-row__time">5,5–6 часов в пути через Экибастуз</span>
+              <span class="route-row__bar"><i></i></span>
+            </div>
+            <p class="routes__note">Расстояния по автодорогам до села Баянаул, приблизительно. Время зависит от состояния дороги и сезона.</p>
+          </div>
+
+          <div class="map reveal" data-delay="120">
+            <iframe title="Карта: село Баянаул и озёра национального парка" loading="lazy"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=75.52%2C50.76%2C75.78%2C50.90&amp;layer=mapnik&amp;marker=50.793%2C75.700"></iframe>
+            <div class="map__bar">
+              <span>Село Баянаул, 50°47′ с.&nbsp;ш. 75°42′ в.&nbsp;д.</span>
+              <a href="https://www.openstreetmap.org/?mlat=50.793&amp;mlon=75.700#map=11/50.82/75.64" target="_blank" rel="noopener noreferrer">Открыть большую карту ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="notes">
+          <div class="note reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l1.6-4.2a2 2 0 011.9-1.3h7a2 2 0 011.9 1.3L19 11M4 11h16a1 1 0 011 1v4.5H3V12a1 1 0 011-1zM6 16.5v2M18 16.5v2"/><circle cx="7.5" cy="13.8" r=".9"/><circle cx="16.5" cy="13.8" r=".9"/></svg>
+            <div><h3>На автомобиле</h3><p>Заправьтесь заранее в городе: в горах заправок мало. Между озёрами и достопримечательностями удобнее всего перемещаться на машине.</p></div>
+          </div>
+          <div class="note reveal" data-delay="80">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="4" width="15" height="13" rx="2.5"/><path d="M4.5 11h15M8 17v2.5M16 17v2.5"/><circle cx="8.3" cy="14" r=".8"/><circle cx="15.7" cy="14" r=".8"/></svg>
+            <div><h3>На автобусе</h3><p>В Баянаул ходят рейсовые автобусы из ближайших городов. Расписание меняется по сезонам — уточняйте его на автовокзале.</p></div>
+          </div>
+          <div class="note reveal" data-delay="160">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5a2 2 0 012-2h12a2 2 0 012 2v1.6a1.9 1.9 0 000 3.8v1.6a2 2 0 01-2 2H6a2 2 0 01-2-2v-1.6a1.9 1.9 0 000-3.8z"/><path d="M14 6.5v11" stroke-dasharray="2 2.4"/></svg>
+            <div><h3>Въезд в парк</h3><p>На въезде в национальный парк оплачивается экологический сбор. Сохраняйте квитанцию до конца поездки.</p></div>
+          </div>
+        </div>
+
+        <div class="tips" id="tips">
+          <div class="reveal">
+            <h3 class="tips__title">Советы <em>путешественнику</em></h3>
+            <p class="tips__intro">Коротко о том, что стоит знать до поездки, чтобы отдых получился лёгким.</p>
+          </div>
+          <div class="faq reveal" data-delay="120">
+            <details name="tips" open>
+              <summary>Где остановиться</summary>
+              <p>Большинство баз отдыха, гостевых домов и кемпингов стоит на берегах Жасыбая; есть жильё и в селе Баянаул у Сабындыколя. Уровень комфорта очень разный — от простых летних домиков до современных комплексов, поэтому условия (душ, горячая вода, питание) лучше уточнить при бронировании.</p>
+            </details>
+            <details name="tips">
+              <summary>Что взять с собой</summary>
+              <p>Обувь с нескользящей подошвой для гранитных плит, головной убор и солнцезащитный крем, тёплую кофту на вечер — в горах прохладно даже летом. Пригодятся репеллент, запас питьевой воды на маршруты и немного наличных.</p>
+            </details>
+            <details name="tips">
+              <summary>Правила национального парка</summary>
+              <p>Баянауыл — особо охраняемая природная территория. Разводите огонь только в специально отведённых местах, забирайте мусор с собой, не рвите растения и не оставляйте надписей на скалах: архар и многие растения парка занесены в Красную книгу.</p>
+            </details>
+            <details name="tips">
+              <summary>Если едете с детьми</summary>
+              <p>Для семейного отдыха подойдут песчаные пляжи Жасыбая. Для прогулок выбирайте короткие маршруты — например, к Кемпиртасу. Подъём к пещере Коныр-Аулие оборудован лестницей с площадками для отдыха, но рассчитывайте силы: он длиннее километра.</p>
+            </details>
+            <details name="tips">
+              <summary>Безопасность в горах</summary>
+              <p>Гранит после дождя становится скользким. Не поднимайтесь на скалы без подготовки и снаряжения, сообщайте близким о маршруте и возвращайтесь до темноты: мобильная связь в ущельях может пропадать.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Имена ===================== -->
+    <section class="section people on-dark topo" id="people">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">08</span><span class="eyebrow__line"></span>Земля великих имён</p>
+          <h2 class="h2">Родина учёных <em>и поэтов</em></h2>
+          <p class="section__intro">Баянаульская земля подарила Казахстану людей, чьи имена сегодня носят города, улицы, университеты и киностудия.</p>
+        </header>
+
+        <div class="people__grid">
+          <article class="person reveal">
+            <div class="person__mono" aria-hidden="true">КС</div>
+            <p class="person__years">1899 — 1964</p>
+            <h3 class="person__name">Каныш Сатпаев</h3>
+            <p class="person__text">Геолог, академик, первый президент Академии наук Казахской ССР. Родился в Баянаульском районе.</p>
+          </article>
+          <article class="person reveal" data-delay="70">
+            <div class="person__mono" aria-hidden="true">МЖ</div>
+            <p class="person__years">1858 — 1931</p>
+            <h3 class="person__name">Машхур Жусуп Копеев</h3>
+            <p class="person__text">Поэт, философ и собиратель казахского устного творчества.</p>
+          </article>
+          <article class="person reveal" data-delay="140">
+            <div class="person__mono" aria-hidden="true">СТ</div>
+            <p class="person__years">1893 — 1920</p>
+            <h3 class="person__name">Султанмахмут Торайгыров</h3>
+            <p class="person__text">Поэт. С четырёх лет жил в Баянауле; его имя носят озеро и село в парке.</p>
+          </article>
+          <article class="person reveal" data-delay="210">
+            <div class="person__mono" aria-hidden="true">ША</div>
+            <p class="person__years">1914 — 1970</p>
+            <h3 class="person__name">Шакен Айманов</h3>
+            <p class="person__text">Актёр и кинорежиссёр, народный артист СССР. Его имя носит киностудия «Казахфильм».</p>
+          </article>
+          <article class="person reveal" data-delay="280">
+            <div class="person__mono" aria-hidden="true">АМ</div>
+            <p class="person__years">1904 — 1985</p>
+            <h3 class="person__name">Алькей Маргулан</h3>
+            <p class="person__text">Археолог и этнограф, академик, исследователь древней культуры Сарыарки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Галерея ===================== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">09</span><span class="eyebrow__line"></span>Галерея</p>
+          <h2 class="h2">Баянауыл <em>в кадре</em></h2>
+          <p class="section__intro">Нажмите на фотографию, чтобы рассмотреть её ближе. Листать можно стрелками на клавиатуре или свайпом.</p>
+        </header>
+
+        <div class="gallery__grid reveal">
+          <a class="gallery__item g-w2 g-h2" href="images/g-horse.jpg" data-caption="Водопой у озера Торайгыр" data-credit="Фото: AscareOs · CC BY-SA 4.0">
+            <img src="images/g-horse.jpg" width="1280" height="853" loading="lazy" alt="Серая лошадь пьёт воду из озера на фоне слоистых скал">
+            <span class="gallery__cap">Водопой у озера Торайгыр</span>
+          </a>
+          <a class="gallery__item" href="images/g-toraigyr-rocks.jpg" data-caption="Слоистые скалы над Торайгыром" data-credit="Фото: Timur Jansultan · CC BY-SA 4.0">
+            <img src="images/g-toraigyr-rocks.jpg" width="1280" height="853" loading="lazy" alt="Слоистые гранитные скалы отражаются в воде озера Торайгыр">
+            <span class="gallery__cap">Слоистые скалы над Торайгыром</span>
+          </a>
+          <a class="gallery__item g-h2" href="images/g-sunset.jpg" data-caption="Закат на Жасыбае" data-credit="Фото: Айгерим Аубакирова · CC BY-SA 4.0">
+            <img src="images/g-sunset.jpg" width="1000" height="1333" loading="lazy" alt="Оранжевое солнце садится за горы над озером Жасыбай">
+            <span class="gallery__cap">Закат на Жасыбае</span>
+          </a>
+          <a class="gallery__item" href="images/g-stones.jpg" data-caption="Гранитные останцы" data-credit="Фото: DiamondMoore · CC BY-SA 4.0">
+            <img src="images/g-stones.jpg" width="1280" height="960" loading="lazy" alt="Причудливые гранитные останцы под синим небом">
+            <span class="gallery__cap">Гранитные останцы</span>
+          </a>
+          <a class="gallery__item g-w2" href="images/g-jasybay-above.jpg" data-caption="Жасыбай с высоты" data-credit="Фото: Timur Jansultan · CC BY-SA 4.0">
+            <img src="images/g-jasybay-above.jpg" width="1280" height="853" loading="lazy" alt="Вид с горы на озеро Жасыбай под облачным небом">
+            <span class="gallery__cap">Жасыбай с высоты</span>
+          </a>
+          <a class="gallery__item" href="images/g-lone-tree.jpg" data-caption="Дорога в Торайгыр перед грозой" data-credit="Фото: AscareOs · CC BY-SA 4.0">
+            <img src="images/g-lone-tree.jpg" width="1280" height="853" loading="lazy" alt="Одинокое дерево у дороги на фоне грозового неба">
+            <span class="gallery__cap">Дорога в Торайгыр перед грозой</span>
+          </a>
+          <a class="gallery__item" href="images/g-winter-lake.jpg" data-caption="Зимний Жасыбай" data-credit="Фото: AlexanderAlUS · CC BY-SA 3.0">
+            <img src="images/g-winter-lake.jpg" width="1280" height="960" loading="lazy" alt="Заснеженное озеро Жасыбай и горы на закате зимнего дня">
+            <span class="gallery__cap">Зимний Жасыбай</span>
+          </a>
+          <a class="gallery__item" href="images/g-rock-arch.jpg" data-caption="Каменный «гриб» неподалёку от Кемпиртаса" data-credit="Фото: Graphique38 · CC BY 4.0">
+            <img src="images/g-rock-arch.jpg" width="1280" height="960" loading="lazy" alt="Гранитная глыба, изогнутая в форме гриба">
+            <span class="gallery__cap">Каменный «гриб» у Кемпиртаса</span>
+          </a>
+          <a class="gallery__item g-w2" href="images/g-bulka-valley.jpg" data-caption="Долина у горы Булка" data-credit="Фото: Ekamaloff · общественное достояние">
+            <img src="images/g-bulka-valley.jpg" width="1280" height="720" loading="lazy" alt="Зелёная долина с гранитными плитами и куполом горы Булка">
+            <span class="gallery__cap">Долина у горы Булка</span>
+          </a>
+          <a class="gallery__item" href="images/g-sabyndykol.jpg" data-caption="Озеро Сабындыколь" data-credit="Фото: Parziva1111 · CC BY-SA 4.0">
+            <img src="images/g-sabyndykol.jpg" width="1280" height="720" loading="lazy" alt="Озеро Сабындыколь: камни у берега и облака над водой">
+            <span class="gallery__cap">Озеро Сабындыколь</span>
+          </a>
+          <a class="gallery__item g-w2d" href="images/g-ducklings.jpg" data-caption="Утята на Жасыбае" data-credit="Фото: Ivan ideia · CC BY-SA 4.0">
+            <img src="images/g-ducklings.jpg" width="1280" height="819" loading="lazy" alt="Два утёнка плывут по озеру Жасыбай">
+            <span class="gallery__cap">Утята на Жасыбае</span>
+          </a>
+          <a class="gallery__item g-w2" href="images/g-granite.jpg" data-caption="Каменные «лепёшки» и сосны" data-credit="Фото: DiamondMoore · CC BY-SA 4.0">
+            <img src="images/g-granite.jpg" width="1280" height="960" loading="lazy" alt="Слоистые гранитные плиты-«лепёшки» с сосенками под облаками">
+            <span class="gallery__cap">Каменные «лепёшки» и сосны</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Финал ===================== -->
+    <section class="cta on-dark topo">
+      <div class="cta__ghost" aria-hidden="true">Баянауыл</div>
+      <div class="container cta__inner reveal">
+        <svg class="ornament" viewBox="0 0 150 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10h46M102 10h46"/><path d="M75 2l8 8-8 8-8-8z"/><path d="M58 10l3.5-3.5L65 10l-3.5 3.5zM85 10l3.5-3.5L92 10l-3.5 3.5z"/></svg>
+        <h2 class="h2">Горы уже <em>ждут</em></h2>
+        <p>Соберите рюкзак, проверьте маршрут — и до встречи на берегу Жасыбая.</p>
+        <div class="cta__actions">
+          <a class="btn btn--accent" href="#route">Проложить маршрут
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#lakes">Выбрать озеро</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Подвал ===================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo" href="#top" aria-label="Баянауыл — в начало страницы">
+          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="20" cy="20" r="18.6" stroke-width="1.4"/>
+            <path d="M6.5 26.5l8-11.5 4.8 6.2 3.9-6.7 10.3 12" stroke-width="1.8"/>
+            <path d="M10 31c2.6-1.5 4.6-1.5 7.2 0s4.6 1.5 7.2 0 3.7-1.3 5.6-.6" stroke-width="1.4"/>
+          </svg>
+          <span class="logo__text">Баянауыл</span>
+        </a>
+        <p class="footer__about">Путеводитель по Баянаульскому национальному парку — горному оазису на юге Павлодарской области Казахстана.</p>
+      </div>
+
+      <div>
+        <p class="footer__title">Разделы</p>
+        <nav class="footer__nav" aria-label="Разделы сайта">
+          <a href="#about">О крае</a>
+          <a href="#todo">Чем заняться</a>
+          <a href="#lakes">Озёра</a>
+          <a href="#seasons">Сезоны</a>
+          <a href="#rocks">Скалы и легенды</a>
+          <a href="#route">Как добраться</a>
+          <a href="#nature">Природа</a>
+          <a href="#gallery">Галерея</a>
+        </nav>
+      </div>
+
+      <div class="footer__src">
+        <p class="footer__title">Об этом сайте</p>
+        <p>Информационный сайт, не является официальным ресурсом национального парка. Актуальные правила посещения и тарифы уточняйте у администрации парка.</p>
+        <p>Тексты подготовлены по материалам <a href="https://ru.wikipedia.org/wiki/Баянаульский_национальный_парк" target="_blank" rel="noopener noreferrer">Википедии</a> (CC BY-SA 4.0). Фотографии — Wikimedia Commons. Карта — © участники OpenStreetMap.</p>
+        <p class="footer__author">Автор сайта, дизайн и разработка — <a href="https://github.com/erkhanermekuly" target="_blank" rel="noopener noreferrer author"><b>Ермекұлы Ерхан</b></a>. Копирование кода и дизайна без разрешения автора запрещено.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <details class="credits">
+        <summary>Авторы фотографий и лицензии</summary>
+        <ul class="credits__list">
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA2.jpg" target="_blank" rel="noopener noreferrer"><b>Баянаульский национальный парк2</b></a> — Almaz Tleuliyev, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%96%D0%B0%D1%81%D1%8B%D0%B1%D0%B0%D0%B9_%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D0%BC_%D1%83%D1%82%D1%80%D0%BE%D0%BC.jpg" target="_blank" rel="noopener noreferrer"><b>Озеро Жасыбай ранним утром</b></a> — Sadoviygnomik, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bayanaul_mountains.jpg" target="_blank" rel="noopener noreferrer"><b>Bayanaul mountains</b></a> — AscareOs, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Herd_of_horses.jpg" target="_blank" rel="noopener noreferrer"><b>Herd of horses</b></a> — AscareOs, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%96%D0%B0%D1%81%D1%8B%D0%B1%D0%B0%D0%B9_%D0%B8_%D0%BE%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%B0.jpg" target="_blank" rel="noopener noreferrer"><b>Озеро Жасыбай и окрестная природа</b></a> — Sadoviygnomik, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D1%82%D0%BE_2_-_%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%A1%D0%B0%D0%B1%D1%8B%D0%BD%D0%B4%D1%8B%D0%BA%D0%BE%D0%BB%D1%8C.jpg" target="_blank" rel="noopener noreferrer"><b>Фото 2 - Озеро Сабындыколь</b></a> — Aigul Mussayeva, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%A2%D0%BE%D1%80%D0%B0%D0%B9%D0%B3%D1%8B%D1%80_%D0%B2_%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB%D0%B5.jpg" target="_blank" rel="noopener noreferrer"><b>Озеро Торайгыр в Баянауле</b></a> — IPotapOFF, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Kempirtas_Summer.jpg" target="_blank" rel="noopener noreferrer"><b>Kempirtas Summer</b></a> — Yakov Fedorov, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bulka_Mountain.jpg" target="_blank" rel="noopener noreferrer"><b>Bulka Mountain</b></a> — Timur Jansultan, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Serketas_in_Bayanaul_National_Park.jpg" target="_blank" rel="noopener noreferrer"><b>Serketas in Bayanaul National Park</b></a> — Graphique38, <a href="https://creativecommons.org/licenses/by/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Konyr-Aulie,_Bayanaul_1.jpg" target="_blank" rel="noopener noreferrer"><b>Konyr-Aulie, Bayanaul 1</b></a> — Yakov Fedorov, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Witches%27_Ravine_in_Bayanaul_National_Park.jpg" target="_blank" rel="noopener noreferrer"><b>Witches&#x27; Ravine in Bayanaul National Park</b></a> — Graphique38, <a href="https://creativecommons.org/licenses/by/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%96%D0%B0%D1%87%D1%8B%D0%B1%D0%B0%D0%B9_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B_%D0%90%D0%BA%D0%B1%D0%B5%D1%82.jpg" target="_blank" rel="noopener noreferrer"><b>Жачыбай с высоты Акбет</b></a> — Odindoma, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Tree_on_the_edge_of_a_cliff.jpg" target="_blank" rel="noopener noreferrer"><b>Tree on the edge of a cliff</b></a> — Ivan ideia, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Forest_on_lake_toraigyr.jpg" target="_blank" rel="noopener noreferrer"><b>Forest on lake toraigyr</b></a> — Ivan ideia, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Landscape_of_Bayanaul_National_Park.jpg" target="_blank" rel="noopener noreferrer"><b>Landscape of Bayanaul National Park</b></a> — Dilaila T, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bayanaul_National_Reserve_Park_Toraigyr_Lake.jpg" target="_blank" rel="noopener noreferrer"><b>Bayanaul National Reserve Park Toraigyr Lake</b></a> — DiamondMoore, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_%D0%94%D0%B6%D0%B0%D1%81%D1%8B%D0%B1%D0%B0%D0%B9_%D0%B8_%D0%B3%D0%BE%D1%80%D1%8B.jpg" target="_blank" rel="noopener noreferrer"><b>Баянаульский национальный парк озеро Джасыбай и горы</b></a> — Ivan ideia, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Winter_dzhasybay.JPG" target="_blank" rel="noopener noreferrer"><b>Winter dzhasybay</b></a> — AlexanderAlUS, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 3.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%94%D0%BE%D1%80%D0%BE%D0%B3%D0%B0_%D0%BD%D0%B0_%D0%B6%D0%B0%D1%81%D1%8B%D0%B1%D0%B0%D0%B9.jpg" target="_blank" rel="noopener noreferrer"><b>Дорога на жасыбай</b></a> — Ivan ideia, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9B%D0%BE%D1%88%D0%B0%D0%B4%D0%BA%D0%B0_%D0%B2_%D0%A2%D0%BE%D1%80%D0%B0%D0%B9%D0%B3%D1%8B%D1%80%D0%B5_(%D0%BD%D0%B5%D0%B4%D0%B0%D0%BB%D0%B5%D0%BA%D0%BE_%D0%BE%D1%82_%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB%D0%B0).jpg" target="_blank" rel="noopener noreferrer"><b>Лошадка в Торайгыре (недалеко от Баянаула)</b></a> — AscareOs, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%A2%D0%BE%D1%80%D0%B0%D0%B9%D0%B3%D1%8B%D1%80.jpg" target="_blank" rel="noopener noreferrer"><b>Озеро Торайгыр</b></a> — Timur Jansultan, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bayanaul_National_Reserve_Park_Stones.jpg" target="_blank" rel="noopener noreferrer"><b>Bayanaul National Reserve Park Stones</b></a> — DiamondMoore, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%96%D0%B0%D1%81%D1%8B%D0%B1%D0%B0%D0%B9_%D0%BD%D0%B0_%D0%B7%D0%B0%D0%BA%D0%B0%D1%82%D0%B5.jpg" target="_blank" rel="noopener noreferrer"><b>Озеро Жасыбай на закате</b></a> — Айгерим Аубакирова, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Jasybai_Lake.jpg" target="_blank" rel="noopener noreferrer"><b>Jasybai Lake</b></a> — Timur Jansultan, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%BF%D1%83%D1%82%D0%B8_%D0%B2_%D0%A2%D0%BE%D1%80%D0%B0%D0%B9%D0%B3%D1%8B%D1%80.jpg" target="_blank" rel="noopener noreferrer"><b>Одинокое дерево по пути в Торайгыр</b></a> — AscareOs, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Kempirtas_Winter.jpg" target="_blank" rel="noopener noreferrer"><b>Kempirtas Winter</b></a> — Yakov Fedorov, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Natural_rock_arch_near_Kempir-Tas,_Bayanaul.jpg" target="_blank" rel="noopener noreferrer"><b>Natural rock arch near Kempir-Tas, Bayanaul</b></a> — Graphique38, <a href="https://creativecommons.org/licenses/by/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Mount_Bulka.jpg" target="_blank" rel="noopener noreferrer"><b>Mount Bulka</b></a> — Ekamaloff, общественное достояние</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%B1%D1%8B%D0%BD%D0%B4%D1%8B%D0%BA%D0%BE%D0%BB%D1%8C_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE.jpg" target="_blank" rel="noopener noreferrer"><b>Сабындыколь озеро</b></a> — Parziva1111, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Ducklings_on_lake_zhasybai_in_bayanaul.jpg" target="_blank" rel="noopener noreferrer"><b>Ducklings on lake zhasybai in bayanaul</b></a> — Ivan ideia, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bayanaul_National_Reserve_Park_Stone.jpg" target="_blank" rel="noopener noreferrer"><b>Bayanaul National Reserve Park Stone</b></a> — DiamondMoore, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener noreferrer license">CC BY-SA 4.0</a></li>
+        </ul>
+      </details>
+
+      <div class="footer__bottom">
+        <p>© 2026 <b>Ермекұлы Ерхан</b>. Все права защищены.</p>
+        <p>Баянауыл — каменная сказка Сарыарки · сделано с любовью к горам Казахстана</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+</body>
+</html>
